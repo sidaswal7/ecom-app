@@ -5,7 +5,7 @@ import ProductItem from "./ProductItem";
 const Product = ()=> {
     return(
         <section>
-            <ul>            
+            <ul className="flex justify-center flex-wrap gap-8">            
                 {dummyData.map((data)=>{
                     return(
                         <ProductItem
