@@ -38,7 +38,7 @@ const Cart = (props) => {
           X
         </button>
       </header>
-      <hr className="mb-4"/>
+      <hr className="mb-4" />
       <ul>
         {cartItems.map((item) => {
           return (
@@ -53,10 +53,12 @@ const Cart = (props) => {
 
       <footer>
         <div className="flex justify-center">
-            <h2 className="font-medium mt-4 text-xl">Total: $134</h2>
+          <h2 className="font-medium mt-4 text-xl">Total: $134</h2>
         </div>
         <div className="flex justify-center">
-            <button className="bg-blue-600 px-4 py-2 hover:bg-blue-700 text-white rounded mt-4 font-bold text-xl">Purchase</button>
+          <button className="bg-blue-500 px-4 py-2 hover:bg-blue-600 text-white rounded mt-4 font-bold text-xl">
+            Purchase
+          </button>
         </div>
       </footer>
     </Modal>
