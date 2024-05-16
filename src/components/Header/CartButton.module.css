@@ -1,0 +1,9 @@
+.btn {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 4px 6px;
+}
+
+.btn span{
+    margin-left: 4px;
+}

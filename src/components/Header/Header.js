@@ -4,7 +4,7 @@ import CartButton from "./CartButton";
 
 const Header = ()=>{
     return (
-        <header className="bg-black text-blue-400 py-5">
+        <header className="bg-black text-blue-400 py-5 flex justify-between px-8">
             <Navigation/>
             <CartButton/>
         </header>
