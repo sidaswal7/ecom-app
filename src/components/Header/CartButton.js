@@ -7,7 +7,7 @@ const CartButton = (props)=> {
         <button
             className={classes.btn}
             type="button"
-            onClick={() => props.onShowCart()}
+            onClick={props.onShowCart}
         >
         Cart
         <span>0</span>
