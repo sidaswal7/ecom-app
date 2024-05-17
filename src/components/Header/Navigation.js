@@ -1,16 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Navigation = ()=> {
     return(
         <ul className="flex flex-row justify-center items-center">
             <li className="mr-10 text-xl">
-                <Link to="/">HOME</Link>
+                <NavLink to="/" className={({isActive})=> isActive ? "text-white":''} end>HOME</NavLink>
             </li>
             <li className="mr-10 text-xl">
-                <Link to="/store">STORE</Link>
+                <NavLink to="/store" className={({isActive})=> isActive ? "text-white":''}>STORE</NavLink>
             </li>
             <li className="text-xl">
-                <Link to="/about">ABOUT</Link>
+                <NavLink to="/about" className={({isActive})=> isActive ? "text-white":''}>ABOUT</NavLink>
             </li>
         </ul>
     )

@@ -32,7 +32,7 @@ const Cart = (props) => {
 
       <footer>
         <div className="flex justify-center">
-          <h2 className="font-medium mt-4 text-xl">Total: ${cartCtx.products.reduce((sum,item)=>sum+item.price,0)}</h2>
+          <h2 className="font-medium mt-4 text-xl">Total: ${cartCtx.products.reduce((sum,item)=>sum+item.price*item.quantity,0)}</h2>
         </div>
         <div className="flex justify-center">
           <button className="bg-blue-500 px-4 py-2 hover:bg-blue-600 text-white rounded mt-4 font-bold text-xl">
