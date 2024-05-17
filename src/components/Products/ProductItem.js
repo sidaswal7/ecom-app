@@ -23,7 +23,7 @@ const ProductItem = (props) => {
         </div>
       <div className="p-4">
         <h1 className="text-xl font-medium mb-4 text-center">{props.title}</h1>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-evenly items-center">
           <p className="text-gray-700">${props.price}</p>
           <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" onClick={addToCartHandler}>
             Add To Cart
