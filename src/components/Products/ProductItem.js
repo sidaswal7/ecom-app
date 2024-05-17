@@ -5,6 +5,7 @@ const ProductItem = (props) => {
     const cartCtx = useContext(CartContext);
     const addToCartHandler = ()=>{
         cartCtx.addToCart({
+            id:props.id,
             title:props.title,
             price:props.price,
             quantity:1
@@ -21,7 +22,7 @@ const ProductItem = (props) => {
         />
         </div>
       <div className="p-4">
-        <h1 className="text-xl font-medium mb-4">{props.title}</h1>
+        <h1 className="text-xl font-medium mb-4 text-center">{props.title}</h1>
         <div className="flex justify-between items-center">
           <p className="text-gray-700">${props.price}</p>
           <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" onClick={addToCartHandler}>
