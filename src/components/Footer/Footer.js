@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Footer = ()=>{
     return(
         <footer>
-            <div className="flex justify-between px-16 text-blue-400 bg-black py-4 items-center text-xl">
+            <div className="flex justify-between px-16 text-blue-400 bg-black py-4 items-center text-xl mt-7">
                 <h2 className="basis-1/2">UrbanCart&#169;</h2>
                 <ul className="flex justify-between basis-1/2">
                     <li>

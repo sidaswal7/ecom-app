@@ -9,8 +9,11 @@ const Navigation = ()=> {
             <li className="mr-10 text-xl">
                 <NavLink to="/store" className={({isActive})=> isActive ? "text-white":''}>STORE</NavLink>
             </li>
-            <li className="text-xl">
+            <li className="text-xl mr-10">
                 <NavLink to="/about" className={({isActive})=> isActive ? "text-white":''}>ABOUT</NavLink>
+            </li>
+            <li className="text-xl">
+                <NavLink to="/contact" className={({isActive})=> isActive ? "text-white":''}>CONTACT US</NavLink>
             </li>
         </ul>
     )
