@@ -1,31 +1,41 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import CartProvider from "./store/CartProvider";
-import Root from "./pages/Root";
 import Home from "./pages/Home";
 import Store from "./pages/Store";
 import About from "./pages/About";
 import ErrorPage from "./pages/Error";
 import ContactUs from "./pages/ContactUs";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement:<ErrorPage/>,
-    children: [
-      { path: "/", element: <Home /> },
-      { path: "/store", element: <Store /> },
-      { path: "/about", element: <About /> },
-      { path: "/contact", element: <ContactUs/>}
-    ],
-  },
-]);
 
 function App() {
   return (
     <CartProvider>
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <Header/>
+        <Switch>
+          <Route path="/" exact>
+            <Home/>
+          </Route>
+          <Route path="/store" exact>
+            <Store/>
+          </Route>
+          <Route path="/about" exact>
+            <About/>
+          </Route>
+          <Route path="/contact">
+            <ContactUs/>
+          </Route>
+          <Route>
+            <ErrorPage/>
+          </Route>
+
+        </Switch>
+        
+        <Footer/>
+      </BrowserRouter>
     </CartProvider>
   );
 }

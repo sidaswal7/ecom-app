@@ -15,10 +15,17 @@ const Header = ()=>{
 
     return (
         
-        <header className="bg-black text-blue-400 py-5 flex justify-between px-8">
-            { showCart && <Cart onHideCart={hideCartHandler}/>}
-            <Navigation/>
-            <CartButton onShowCart = {showCartHandler}/>
+        <header>
+            <div className="bg-black text-blue-400 py-5 flex justify-between px-8">
+                { showCart && <Cart onHideCart={hideCartHandler}/>}
+                <Navigation/>
+                <CartButton onShowCart = {showCartHandler}/>
+            </div>
+            <h1 className="mb-8 py-8 text-black text-center font-bold text-4xl bg-gradient-to-r from-slate-500 to-white font-robo">
+                UrbanCart
+            </h1>
+
+            
         </header>
     )
 }
