@@ -8,10 +8,14 @@ import ErrorPage from "./pages/Error";
 import ContactUs from "./pages/ContactUs";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import ProductDetails from "./pages/ProductDetail";
+import Auth from "./pages/Auth";
+import { AuthContextProvider } from "./store/auth-context";
 
 
 function App() {
   return (
+    <AuthContextProvider>
     <CartProvider>
       <BrowserRouter>
         <Header/>
@@ -22,11 +26,17 @@ function App() {
           <Route path="/store" exact>
             <Store/>
           </Route>
+          <Route path="/store/:productId">
+            <ProductDetails/>
+          </Route>
           <Route path="/about" exact>
             <About/>
           </Route>
           <Route path="/contact">
             <ContactUs/>
+          </Route>
+          <Route path="/auth">
+            <Auth/>
           </Route>
           <Route>
             <ErrorPage/>
@@ -37,6 +47,7 @@ function App() {
         <Footer/>
       </BrowserRouter>
     </CartProvider>
+    </AuthContextProvider>
   );
 }
 
