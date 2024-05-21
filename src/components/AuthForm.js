@@ -41,17 +41,22 @@ const AuthForm = ()=>{
         })();
     }
     return(
-        <form onSubmit={submitHandler}>
-            <div>
-                <label htmlFor="email">Email: </label>
-                <input type="email" id="email" placeholder="Enter the Email" ref={emailRef}/>
-            </div>
-            <div>
-                <label htmlFor="password">Password: </label>
-                <input type="password" id="password" placeholder="Enter the Password" ref={passwordRef}/>
-            </div>
-            <button type="submit">Login</button>
-        </form>
+        <div className="h-screen flex justify-center items-start mt-5">
+            <form onSubmit={submitHandler} className=" border-2 p-4 w-1/3 h-72 shadow-lg rounded-md">
+            <h1 className="text-2xl font-medium text-center my-2">Login</h1>
+                <div>
+                    <label htmlFor="email" className="block text-lg font-medium">Email: </label>
+                    <input type="email" id="email" ref={emailRef} className="border-black border w-full py-1 mb-2"/>
+                </div>
+                <div>
+                    <label htmlFor="password" className="block text-lg font-medium">Password: </label>
+                    <input type="password" id="password" ref={passwordRef} className="border-black border w-full py-1 mb-1"/>
+                </div>
+                <div className="flex justify-center items-center">
+                    <button type="submit" className="bg-blue-500 hover:bg-blue-600 p-2 rounded text-white mt-5 px-8">Login</button>
+                </div>
+            </form>
+        </div>
     )
 }
 

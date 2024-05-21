@@ -8,13 +8,13 @@ const Footer = ()=>{
                 <h2 className="basis-1/2">UrbanCart&#169;</h2>
                 <ul className="flex justify-between basis-1/2">
                     <li>
-                        <NavLink to="/youtube">Youtube</NavLink>
+                        <NavLink to="/youtube.com">Youtube</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/linkedin">LinkedIn</NavLink>
+                        <NavLink to="/linkedin.com">LinkedIn</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/contact">Contact Us</NavLink>
+                        <NavLink to="/contact.com">Contact Us</NavLink>
                     </li>
                 </ul>
             </div>

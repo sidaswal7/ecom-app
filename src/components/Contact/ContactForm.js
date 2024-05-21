@@ -29,22 +29,27 @@ const ContactForm = ()=> {
 
     }
     return (
-        <form onSubmit={formHandler} className="flex justify-center flex-col items-center border py-4">
-            <div className="mb-3 flex">
-                <label htmlFor="name" className="mr-4 text-2xl font-medium">Name: </label>
-                <input type="text" id="name" ref={nameRef} className="border-black border"/>
-            </div>
-            <div className="mb-3 flex">
-                <label htmlFor="email" className="mr-4 text-2xl font-medium">Email Id: </label>
-                <input type="email" id="email" ref={emailRef} className="border-black border"/>
-            </div>
-            <div className="mb-3 flex">
-                <label htmlFor="number" className="mr-4 text-2xl font-medium">Number: </label>
-                <input type="number" id="number" ref={numberRef} className="border-black border"/>
-            </div>
-            <button type="submit" className="bg-blue-500 hover:bg-blue-600 p-2 rounded text-white ">Submit</button>
+        <div className="flex justify-center items-center h-screen">
+            <form onSubmit={formHandler} className=" border-2 p-4 w-1/3 h-96 shadow-lg rounded-md">
+                <h1 className="text-2xl font-medium text-center my-3">Contact Form</h1>
+                <div className="mb-3">
+                    <label htmlFor="name" className="mr-4 text-xl block font-medium  mb-1">Name: </label>
+                    <input type="text" id="name" ref={nameRef} className="border-black border w-full py-1"/>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="email" className="mr-4 text-xl block font-medium mb-1">Email Id: </label>
+                    <input type="email" id="email" ref={emailRef} className="border-black border w-full py-1"/>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="number" className="mr-4 text-xl block font-medium mb-1">Number: </label>
+                    <input type="number" id="number" ref={numberRef} className="border-black border w-full py-1"/>
+                </div>
+                <div className="flex justify-center items-center">
+                    <button type="submit" className="bg-blue-500 hover:bg-blue-600 p-2 rounded text-white my-3 px-8">Submit</button>
+                </div>
 
-        </form>
+            </form>
+        </div>
     )
 }
 
